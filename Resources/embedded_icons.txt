@@ -1,1 +1,2 @@
-﻿Logo\Sledge.ico
+﻿Logo\ToeKnife.ico
+format.ico
