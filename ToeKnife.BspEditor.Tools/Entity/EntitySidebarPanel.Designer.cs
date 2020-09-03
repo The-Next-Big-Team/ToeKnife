@@ -1,4 +1,6 @@
-﻿namespace ToeKnife.BspEditor.Tools.Entity
+﻿using System.Windows.Forms;
+
+namespace ToeKnife.BspEditor.Tools.Entity
 {
     partial class EntitySidebarPanel
     {
@@ -28,8 +30,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntitySidebarPanel));
             this.EntityTypeLabel = new System.Windows.Forms.Label();
             this.EntityTypeList = new System.Windows.Forms.ComboBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // EntityTypeLabel
@@ -53,15 +57,30 @@
             this.EntityTypeList.TabIndex = 5;
             this.EntityTypeList.SelectedIndexChanged += new System.EventHandler(this.EntityTypeList_SelectedIndexChanged);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 47);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(194, 150);
+            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
             // EntitySidebarPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.EntityTypeLabel);
             this.Controls.Add(this.EntityTypeList);
             this.MinimumSize = new System.Drawing.Size(200, 50);
             this.Name = "EntitySidebarPanel";
-            this.Size = new System.Drawing.Size(200, 50);
+            this.Size = new System.Drawing.Size(200, 203);
             this.ResumeLayout(false);
 
         }
@@ -70,5 +89,6 @@
 
         private System.Windows.Forms.Label EntityTypeLabel;
         private System.Windows.Forms.ComboBox EntityTypeList;
+        private RichTextBox richTextBox1;
     }
 }

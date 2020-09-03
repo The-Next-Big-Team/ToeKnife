@@ -573,7 +573,11 @@ namespace ToeKnife.BspEditor.Tools.Selection
                     box = box.Transform(trans);
 
                     var label = "";
-                    if (box != null && !box.IsEmpty()) label = box.Width.ToString("0") + " x " + box.Length.ToString("0") + " x " + box.Height.ToString("0");
+                    //if (box != null && !box.IsEmpty()) label = box.Width.ToString("0") + " x " + box.Length.ToString("0") + " x " + box.Height.ToString("0");
+                    if (box != null && !box.IsEmpty()) label =
+                    "X width: " + box.Width.ToString("0") +
+                    " | Y height: " + box.Height.ToString("0") +
+                    " | Z depth: " + box.Length.ToString("0");
                     Oy.Publish("MapDocument:ToolStatus:UpdateText", label);
                 }
             }

@@ -15,7 +15,7 @@ namespace ToeKnife.BspEditor.Tools
         public event EventHandler<string> TextChanged;
 
         public string ID => "ToeKnife.BspEditor.Tools.ToolStatusItem";
-        public int Width => 130;
+        public int Width => 350;
         public bool HasBorder => true;
         public string Text { get; set; }
 

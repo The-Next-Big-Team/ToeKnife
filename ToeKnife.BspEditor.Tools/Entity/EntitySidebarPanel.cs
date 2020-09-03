@@ -32,7 +32,7 @@ namespace ToeKnife.BspEditor.Tools.Entity
             InitializeComponent();
             CreateHandle();
 
-            Oy.Subscribe<MapDocument>("Document:Activated", d => { this.InvokeLater(() => RefreshEntities(d)); });
+            Oy.Subscribe<MapDocument>("Document:Activated", d => { this.InvokeLater(() => RefreshEntities(d));});
             Oy.Subscribe<EntityTool>("EntityTool:ResetEntityType", t => { this.InvokeLater(() => ResetEntityType(t)); });
         }
 
@@ -103,6 +103,11 @@ namespace ToeKnife.BspEditor.Tools.Entity
         private void EntityTypeList_SelectedIndexChanged(object sender, EventArgs e)
         {
             Oy.Publish("Context:Add", new ContextInfo("EntityTool:ActiveEntity", GetSelectedEntity()?.Name));
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

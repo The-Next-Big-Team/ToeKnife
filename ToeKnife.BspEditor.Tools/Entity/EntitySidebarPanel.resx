@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Reminder:
+
+Some, if not all two-dimensional entities, will appear at z=0 (the playing field) regardless of its depth location in the world. 
+
+Please keep this in mind when placing down 2D entities, and design your levels around this. Look at some sample projects for reference!</value>
+  </data>
 </root>

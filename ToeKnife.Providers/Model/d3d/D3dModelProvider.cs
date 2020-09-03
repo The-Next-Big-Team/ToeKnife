@@ -32,7 +32,7 @@ namespace ToeKnife.Providers.Model.d3d
 
         public IModelRenderable CreateRenderable(IModel model)
         {
-            return new D3dModelRenderable((D3dModel)model);
+            return null;//new D3dModelRenderable((D3dModel)model);
         }
     }
 }
